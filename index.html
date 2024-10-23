@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="logo">Recipe Manager</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#add-recipe">Add Recipe</a></li>
+          <li><a href="#recipe-list">Recipe List</a></li>
+          <li><a href="#shopping-list">Shopping List</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="categories" id="categories">
+      <div class="category-card" onclick="filterRecipes('Indian')">
+        <img src="indian.jpeg" alt="Indian Cuisine">
+        <h2>Indian</h2>
+      </div>
+      <div class="category-card" onclick="filterRecipes('Italian')">
+        <img src="italian.jpeg" alt="Italian Cuisine">
+        <h2>Italian</h2>
+      </div>
+      <div class="category-card" onclick="filterRecipes('Mexican')">
+        <img src="mexican.jpg" alt="Mexican Cuisine">
+        <h2>Mexican</h2>
+      </div>
+      <div class="category-card" onclick="filterRecipes('Japanese')">
+        <img src="japanese.jpeg" alt="Japanese Cuisine">
+        <h2>Japanese</h2>
+      </div>
+      <div class="category-card" onclick="filterRecipes('Chinese')">
+        <img src="chinese.jpg" alt="Chinese Cuisine">
+        <h2>Chinese</h2>
+      </div>
+      <div class="category-card" onclick="filterRecipes('Turkish')">
+        <img src="turkish.jpeg" alt="Turkish Cuisine">
+        <h2>Turkish</h2>
+      </div>
+
+    </section>
+
+    <section id="recipe-list">
+      <h2>Recipe List</h2>
+      <div id="recipes" class="recipe-grid"></div>
+    </section>
+
+
+
+    <section class="new-recipe" id="add-recipe">
+      <h2>Add a New Recipe</h2>
+      <form id="recipe-form">
+        <div class="form-group">
+          <label for="name">Recipe Name:</label>
+          <input type="text" id="name" placeholder="Enter Recipe Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ingredients">Ingredients:</label>
+          <input type="textarea" id="ingredients" placeholder="Enter ingredients seperated by commas "
+            required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="instructions">Instructions:</label>
+          <input type="textarea" id="instructions" placeholder="Enter cooking Instructions" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Indian">Indian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Chinese">Chinese</option>
+            <option value="turkish">Turkish</option>
+
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Add Recipe</button>
+      </form>
+    </section>
+
+    <section id="shopping-list">
+      <h2>Shopping List</h2>
+      <ul id="shopping-items"></ul>
+      
+      <!-- Link to Fresh Vegies with the list of ingredients passed as URL params -->
+      <a id="goToFreshVegies" href="http://127.0.0.1:3000/index.html" target="_blank">Go to Fresh Vegies to Buy Ingredients</a>
+    
+      <button onclick="clearShoppingList()">Clear List</button>
+    </section>
+    
+   
+  </div>
+
+  <script src="script.js"></script>
+  
+  
+</body>
+
+</html>

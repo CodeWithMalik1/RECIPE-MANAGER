@@ -1,0 +1,296 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  color: #ff5233;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #ff7b54;
+}
+
+/* Categories Section */
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  text-align: center;
+  margin: 10px;
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-shadow: 1px 1px 1px rgb(213, 195, 195);
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added transition */
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
+}
+
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.category-card h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+/* Recipe Form */
+.new-recipe {
+  background-color: #fff;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+
+.new-recipe h2 {
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #ff7b54;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #ff5233;
+}
+
+/* Recipe List */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added transition */
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+}
+
+.recipe-card button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recipe-card button:hover {
+  background-color: #ff7b54;
+}
+
+
+
+#shopping-list {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+#shopping-list h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#shopping-items {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#shopping-items li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#shopping-items li:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+#shopping-items li button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#shopping-items li button:hover {
+  background-color: #ff3333;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* Anchor tag styled as a button */
+#shopping-list a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#shopping-list a button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 30px auto 0;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#shopping-list a button:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card {
+    max-width: 80%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
